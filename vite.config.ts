@@ -2,14 +2,14 @@
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'path'
 import { defineConfig } from 'vite'
-
+import dts from 'vite-plugin-dts'
 export default defineConfig({
-  plugins: [vueJsx({pragma: 'createElement'})],
+  plugins: [vueJsx({pragma: 'createElement'}),dts()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/vueLayoutPage.ts'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'VueLayoutPage',
-      fileName: (format) => `vue-layout-page.${format}.js`
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       external: [

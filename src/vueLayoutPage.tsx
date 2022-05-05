@@ -24,7 +24,7 @@ export default defineComponent({
     }
   },
   setup(props, { slots }: SetupContext) {
-    
+    // 编译之后用到该函数
     const createElement = h
     const header = ref();
     const main = ref();
