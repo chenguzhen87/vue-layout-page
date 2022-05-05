@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.33/vue.global.min.js" integrity="sha512-nswZG83l1MggaGEAe/zLIbsVpZJUyqv+yg40f2CNp9QH5AOtOsjS4PSdWRDEr/v+R6YPhNJ1gvhDEJDOqh5qxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-demi/0.12.5/index.iife.min.js" integrity="sha512-n4zuKxfhiZQ56pOz+D22wPD7ptIfcmlGpVxvWNaQke+UoF66VQgKQnEZ8ong0Ca4XBRuCbiBhSpmM5L8XexB6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="dist/vue-layout-page.umd.js"></script>
+</head>
+<body>
+    <div id="app">
+        <VueLayoutPage>
+          
+        </VueLayoutPage>
+    </div>
+    <script>
+        const app = Vue.createApp();
+        app.use(VueLayoutPage);
+       
+        app.mount("#app")
+    </script>
+</body>
+</html>
