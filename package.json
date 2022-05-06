@@ -1,8 +1,12 @@
 {
   "name": "vue-layout-page",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Three line layout for Vue page",
-  "keywords": ["vue3","vue-layout","layout"],
+  "keywords": [
+    "vue3",
+    "vue-layout",
+    "layout"
+  ],
   "scripts": {
     "dev": "npm run build && node scripts/switch-vue.js 3 && vite --config ./vite.vue3.config.ts",
     "dev2": "npm run build && node scripts/switch-vue.js 2 && vite --config ./vite.vue2.config.ts",
