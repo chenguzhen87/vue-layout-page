@@ -22,7 +22,8 @@
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
-    }
+    },
+    "./*": "./*"
   },
   "repository": {
     "type": "git",

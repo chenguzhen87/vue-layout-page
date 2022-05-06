@@ -5,3 +5,4 @@ dist
 .yarm.lock
 .package-lock.json
 .yarn-error.log
+.pnpm-lock.yaml
