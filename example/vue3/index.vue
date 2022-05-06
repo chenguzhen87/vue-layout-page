@@ -1,5 +1,5 @@
 <template>
-    <VueLayoutPage>
+    <VueLayoutPage bodyBgColor="#f2f2f2">
         <template #header>
             <header class="header">header</header>
         </template>
@@ -10,12 +10,12 @@
     </VueLayoutPage>
 </template>
 <script>
-import VueLayoutPage from '../../dist/index.es'
-import '../../dist/style.css'
+// import VueLayoutPage from '../../dist/index.es'
+// import '../../dist/style.css'
 export default {
-    components: {
-        VueLayoutPage
-    },
+    // components: {
+    //     VueLayoutPage
+    // },
     data() {
         return {}
     }

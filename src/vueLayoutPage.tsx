@@ -1,12 +1,7 @@
 import { useEventListener } from '@vueuse/core';
-import { defineComponent, h, nextTick, onMounted, onUnmounted, ref, SetupContext, watchEffect } from 'vue-demi';
+import { defineComponent, getCurrentInstance, h as _h, isVue2, nextTick, onMounted, onUnmounted, ref, SetupContext, watchEffect } from 'vue-demi';
 import './index.css';
 
-export interface Options {
-  hideHeaderPlaceholder?: boolean;
-  hideFooterPlaceholder?: boolean;
-  bodyBgColor?: string;
-}
 export default defineComponent({
   name: 'VueLayoutPage',
   props: {
@@ -25,14 +20,13 @@ export default defineComponent({
   },
   setup(props, { slots }: SetupContext) {
     // 编译之后用到该函数
-    const createElement = h
+    const h = _h
     const header = ref();
-    const main = ref();
     const footer = ref();
     const headerh = ref(0);
     const footerh = ref(0);
     const ev = window.onorientationchange ? 'orientationchange' : 'resize';
-
+    console.log(getCurrentInstance())
     watchEffect(()=>{
       document.body.style.backgroundColor = props.bodyBgColor;
     });
@@ -55,6 +49,11 @@ export default defineComponent({
     };
 
     onMounted(() => {
+    // @vue/composition-api 下  https://github.com/vuejs/composition-api/issues/296   
+     if(isVue2){
+            header.value = document.querySelector(".layout-page-header");
+            footer.value = document.querySelector(".layout-page-footer");
+     }
       initPageLayout();
     });
 
@@ -80,7 +79,7 @@ export default defineComponent({
 
         {
           slots.default ? (
-            <main ref={main} class="layout-page-main">
+            <main  class="layout-page-main">
               {slots.default()}
             </main>
           ): null
