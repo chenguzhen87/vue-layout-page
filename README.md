@@ -25,7 +25,9 @@ app.use(VueLayoutPage)
 
 // in SFC component
 <template>
- <VueLayoutPage bodyBgColor="#f2f2f2" />
+ <VueLayoutPage bodyBgColor="#f2f2f2">
+  <!-- your code  -->
+ </VueLayoutPage>
 </template>
 
 ```
@@ -34,7 +36,9 @@ app.use(VueLayoutPage)
 <!-- import locally -->
 
 <template>
-   <VueLayoutPage bodyBgColor="#f2f2f2" />
+  <VueLayoutPage bodyBgColor="#f2f2f2">
+  <!-- your code  -->
+ </VueLayoutPage>
 </template>
 
 <script setup>
@@ -61,7 +65,9 @@ app.use(VueLayoutPage)
 <!-- import locally -->
 
 <template>
-  <VueLayoutPage bodyBgColor="#f2f2f2" />
+  <VueLayoutPage bodyBgColor="#f2f2f2">
+  <!-- your code  -->
+ </VueLayoutPage>
 </template>
 
 <script>
