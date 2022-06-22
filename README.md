@@ -20,7 +20,7 @@ npm install vue-layout-page
 // import globally in main.js
 
 import VueLayoutPage from 'vue-layout-page'
-
+import 'vue-layout-page/dist/style.css';
 app.use(VueLayoutPage)
 
 // in SFC component
@@ -43,6 +43,7 @@ app.use(VueLayoutPage)
 
 <script setup>
 import VueLayoutPage from 'vue-layout-page'
+import 'vue-layout-page/dist/style.css';
 </script>
 ```
 
@@ -57,6 +58,7 @@ npm install  vue-layout-page
 ```ts
 // import globally
 import VueLayoutPage from 'vue-layout-page'
+import 'vue-layout-page/dist/style.css';
 app.use(VueLayoutPage)
 
 ```
@@ -72,7 +74,7 @@ app.use(VueLayoutPage)
 
 <script>
 import VueLayoutPage from 'vue-layout-page'
-
+import 'vue-layout-page/dist/style.css';
 export default {
   components: { VueLayoutPage },
 }
